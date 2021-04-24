@@ -1,0 +1,193 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: #dde1e7;
+    height: 100vh;
+    overflow: hidden;
+}
+.active {
+	background: #d5dae1;
+	border-radius: 8px!important;
+}
+.main-div {
+	width: 70%;
+	height: 70%;
+	margin: 14vh auto;
+	border-radius: 8px;
+	box-shadow: 20px 20px 60px #bdd3dc, -20px -20px 60px #f3f3f3;
+	display: flex;
+}
+.main-div .new-game .new-game_btn{
+	position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+    border: none;
+    background: #18587d;
+    color: #f7f7f7;
+    padding: 5px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: system-ui;
+    box-shadow: 6px 6px 16px 0 rgb(158 158 158 / 20%), -6px -6px 16px 0 rgb(226 226 226);
+        box-shadow: 2px 2px 5px #18587d,
+                -5px -5px 10px #ffffff73;
+    cursor: ;
+}
+.main-div .new-game .new-game_btn:hover {
+    background: #103f5a;
+}
+.main-div .new-game .new-game_btn:focus {
+    outline: none;
+}
+.main-div .roll-dice .roll-dice_btn{
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+    border: none;
+    background: #dde1e7;
+    color: #7c7c7c;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: system-ui;
+    box-shadow: 2px 2px 5px #babecc,
+                -5px -5px 10px #ffffff73;
+}
+.main-div .roll-dice .roll-dice_btn:hover { 
+    background: #d0d7e0;
+}
+.main-div .roll-dice .roll-dice_btn:active{ 
+    box-shadow: inset 1px 1px 2px #babecc,
+                inset -1px -1px 2px #ffffff73;
+    outline: none;
+}
+.main-div .roll-dice .roll-dice_btn:focus{ 
+    outline: none;
+}
+.main-div .hold .hold_btn{
+    position: absolute;
+    left: 50%;
+    bottom: 25%;
+    transform: translateX(-50%);
+    border: none;
+    background: #dde1e7;
+    color: #7c7c7c;
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: system-ui;
+    box-shadow: 2px 2px 5px #babecc,
+                -5px -5px 10px #ffffff73;
+}
+.main-div .player-0, .main-div .player-1 {
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+    width: 50%;
+    align-items: center;
+}
+.main-div .player-1 {
+	margin: 0 0 0 auto;
+}
+.main-div .player-0 .player-0-title h2, .main-div .player-1 .player-1-title h2 {
+    font-size: 30px;
+    color: #004d6b;
+    font-family: system-ui;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.main-div .player-0 .player-0-title h3, .main-div .player-1 .player-1-title h3 {
+    font-size: 60px;
+    color: #ffffff;
+    font-family: system-ui;
+    font-weight: 200;
+    margin: auto;
+}
+.main-div .player-0 .player-0-current, .main-div .player-1 .player-1-current {
+    height: fit-content;
+    box-shadow: inset 1px 1px 2px #babecc,
+                inset -1px -1px 2px #ffffff73;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.main-div .player-0 .player-0-current h2, .main-div .player-1 .player-1-current h2 {
+    font-size: 15px;
+    color: #004d6b;
+    font-family: system-ui;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.main-div .player-0 .player-0-current p, .main-div .player-1 .player-1-current p {
+    font-size: 40px;
+    color: #fff;
+    font-family: system-ui;
+    font-weight: 200;
+    text-align: center;
+    margin: auto;
+    margin-top: -10px;
+}
+.main-div .dice-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 9px rgb(0 0 0 / 20%);
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -70%);
+}
+@media(max-width: 450px) {
+    .main-div {
+        width: 96%;
+        margin: 0 auto;
+        margin-top: 40px;
+    }
+    .main-div .new-game .new-game_btn {
+        width: 60%;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        top: 10%;
+    }
+    .main-div .roll-dice .roll-dice_btn {
+        padding: 5px 15px;
+        bottom: unset;
+        top: 40%;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .main-div .hold .hold_btn {
+        padding: 5px 15px;
+        bottom: unset;
+        top: 45%;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+    }
+    .main-div .dice-image {
+        top: 35%;
+        height: 70px;
+        width: 70px;
+    }
+    .main-div .player-0 .player-0-title h2, .main-div .player-1 .player-1-title h2 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .main-div .player-0 .player-0-title h3, .main-div .player-1 .player-1-title h3 {
+        font-size: 30px;
+    }
+}
